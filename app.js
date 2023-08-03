@@ -6,8 +6,14 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+
 app.use("/api/user", router);
 app.use("/api/blog", blogRouter);
+
+
+
+
 mongoose
   .connect(
     "mongodb+srv://pooja:pooja2810rohit@cluster0.urus3bc.mongodb.net/blogapp"
