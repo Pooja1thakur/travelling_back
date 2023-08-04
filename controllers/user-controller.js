@@ -38,10 +38,11 @@ export const signup = async (req, res, next) => {
 
   try {
     await user.save();
+    console.log(user);
   } catch (err) {
     return console.log(err);
   }
-  return res.status(201).json({msg:"user signup succefully" });
+  return res.status(201).json({msg:"user signup succefully" ,user:user});
 };
 
 export const login = async (req, res, next) => {
